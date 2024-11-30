@@ -113,11 +113,13 @@ html, body {
 }
 
 .card img {
-    width: 80%;
-    height: auto;
-    display: block;
-    margin: auto; 
+  max-width: 100%; /* Забезпечує, що зображення не буде ширше за картку */
+  max-height: 100%; /* Забезпечує, що зображення не буде вище за картку */
+  object-fit: contain; /* Зберігає пропорції зображення */
+  display: block; /* Усуває можливі відступи */
+  margin: auto; /* Центрує зображення */
 }
+
 
   
   #restart-btn {

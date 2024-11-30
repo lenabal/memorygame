@@ -1,4 +1,4 @@
-import { fetchPokemonImages } from './api.js';
+import { fetchRandomPokemonImages } from './api.js';
 import { startTimer, resetTimer, stopTimer} from './timer.js';
 import Card from './card.js';
 
@@ -28,7 +28,7 @@ export default class Game {
     this.board.innerHTML = '';
 
     // Отримання іконок покемонів через API
-    const icons = await fetchPokemonImages(8);
+    const icons = await fetchRandomPokemonImages(8);
 
     // Створюємо картки
     const cardData = [...icons, ...icons].sort(() => Math.random() - 0.5);
